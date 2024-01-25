@@ -21,9 +21,8 @@ def process_and_upload_to_s3():
     with open('/mnt/data/monthly_payments.json', 'r') as file:
         data = json.load(file)
     df = pd.DataFrame(data)
-
-    # Process the DataFrame as needed (e.g., flatten)
-
+    df = pd.json_normalize(data)
+    
     # Convert DataFrame to Parquet
     parquet_buffer = df.to_parquet()
 
