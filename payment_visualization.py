@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the dataset
-file_path = 'path_to_your_json_file'  # Replace with your file path
+file_path = 'path_to_your_json_file'
 df = pd.read_json(file_path)
 
 # Convert UNIX timestamp columns to datetime
